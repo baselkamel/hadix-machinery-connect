@@ -38,7 +38,7 @@ const nav = [
 
 export function Logo({ footer = false }: { footer?: boolean }) {
   return (
-    <div className={`relative bg-card ${footer ? "h-20 w-48" : "h-[4.75rem] w-44 sm:w-52"}`}>
+    <div className={`relative bg-card ${footer ? "h-28 w-28" : "h-24 w-24 sm:h-28 sm:w-28"}`}>
       <img src={logoUrl} alt="AL•HADIX Motion Engineering" className="h-full w-full object-contain" />
     </div>
   );
@@ -48,7 +48,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-card/95 backdrop-blur-sm">
-      <div className="mx-auto grid h-20 max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 lg:px-8">
+      <div className="mx-auto grid h-28 max-w-7xl sm:h-32 grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 lg:px-8">
         <Link to="/" aria-label="AL•HADIX home" className="min-w-0"><Logo /></Link>
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Main navigation">
           {nav.map(([label, to]) => <Link key={to} to={to} activeOptions={{ exact: to === "/" }} activeProps={{ className: "text-primary" }} className="text-sm font-semibold text-foreground transition-colors hover:text-primary">{label}</Link>)}
