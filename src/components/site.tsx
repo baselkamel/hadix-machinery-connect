@@ -38,8 +38,8 @@ const nav = [
 
 export function Logo({ footer = false }: { footer?: boolean }) {
   return (
-    <div className={`relative bg-card ${footer ? "h-28 w-28" : "h-24 w-24 sm:h-28 sm:w-28"}`}>
-      <img src={logoUrl} alt="AL•HADIX Motion Engineering" className="h-full w-full object-contain" />
+    <div className={`relative bg-card ${footer ? "h-28" : "h-24 sm:h-28"}`}>
+      <img src={logoUrl} alt="AL•HADIX Motion Engineering" className="h-full w-auto object-contain" />
     </div>
   );
 }
